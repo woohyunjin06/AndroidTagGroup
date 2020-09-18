@@ -388,8 +388,8 @@ public class TagGroup extends ViewGroup {
     /**
      * @see #setTags(String...)
      */
-    public void setTags(List<String> tagList) {
-        setTags(tagList.toArray(new String[tagList.size()]));
+    public void setTags(List<CharSequence> tagList) {
+        setTags(tagList.toArray(new CharSequence[tagList.size()]));
     }
 
     /**
@@ -397,9 +397,9 @@ public class TagGroup extends ViewGroup {
      *
      * @param tags the tag list to set.
      */
-    public void setTags(String... tags) {
+    public void setTags(CharSequence... tags) {
         removeAllViews();
-        for (final String tag : tags) {
+        for (final CharSequence tag : tags) {
             appendTag(tag);
         }
 
